@@ -653,7 +653,6 @@ export default function ProductStory() {
                 <FadeIn key={o.id}>
                   <button
                     type="button"
-                    data-cursor="EXPLORE"
                     onClick={() => openProductStory(o.id)}
                     className="group relative flex w-full items-center gap-4 overflow-hidden rounded-3xl border border-line bg-panel p-5 text-left transition-all duration-400 hover:-translate-y-1 hover:border-ember/40"
                   >

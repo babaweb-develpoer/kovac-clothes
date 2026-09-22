@@ -107,7 +107,6 @@ function Panel({
         <div className="col-span-7 flex items-center justify-center">
           <motion.button
             type="button"
-            data-cursor="EXPLORE"
             onClick={() => openProductStory(p.id)}
             style={{ x: imgX, rotate: imgRotate, scale: imgScale }}
             className="relative aspect-square w-full max-w-[640px]"

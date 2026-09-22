@@ -142,17 +142,6 @@
   }
 }
 
-/* Custom cursor (pointer: fine only — toggled by <Cursor />) */
-.has-cursor,
-.has-cursor * {
-  cursor: none !important;
-}
-.has-cursor input,
-.has-cursor textarea,
-.has-cursor select {
-  cursor: auto !important;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
