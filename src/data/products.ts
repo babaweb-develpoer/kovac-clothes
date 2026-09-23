@@ -1,3 +1,10 @@
+import {
+  ATLAS_CAMPAIGN_IMG,
+  RECON_MAIN_IMG,
+  SUMMIT_MAIN_IMG,
+  VOYAGER_MAIN_IMG,
+} from "../utils/assets";
+
 export type Colorway = {
   name: string;
   hex: string;
@@ -46,7 +53,7 @@ export const PRODUCTS: Product[] = [
     blurb: "The flagship. Storm-ready, city-quiet.",
     description:
       "A 3-layer KovaShell™ membrane rated to 20,000 mm waterproofing, bonded with StormLock™ seams. Engineered for men who commute through weather, not around it.",
-    img: "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+    img: ATLAS_CAMPAIGN_IMG,
     glow: "rgba(61, 123, 255, 0.34)",
     colorways: [
       { name: "Cobalt Night", hex: "#16233f", accent: "#3d7bff" },
@@ -142,6 +149,87 @@ export const PRODUCTS: Product[] = [
       plate: "Twill core",
       upper: "12 oz bone canvas",
       terrain: "Office / Travel / Evening",
+    },
+  },
+  {
+    id: "voyager",
+    name: "Voyager Tech Pant",
+    subtitle: "Articulated Jogger",
+    tag: "New",
+    tagTone: "ember",
+    cats: ["Everyday", "Performance"],
+    price: 179,
+    compare: 210,
+    blurb: "City-fast tailoring with a running pant's freedom.",
+    description:
+      "A 4-way stretch ripstop jogger with an articulated knee and a reflective ankle zip that catches headlights instead of hiding from them. Tapered enough for the office, loose enough to sprint for the train.",
+    img: VOYAGER_MAIN_IMG,
+    glow: "rgba(61, 123, 255, 0.3)",
+    colorways: [
+      { name: "Graphite", hex: "#2b2e33", accent: "#8ab4ff" },
+      { name: "Storm Navy", hex: "#101a33", accent: "#3d7bff" },
+      { name: "Pitch Black", hex: "#0a0a0c", accent: "#26262c" },
+    ],
+    sizes: [...APPAREL_SIZES],
+    specs: {
+      weight: "340 g (L)",
+      drop: "Tapered, articulated knee",
+      plate: "4-way stretch ripstop",
+      upper: "Reflective ankle zip",
+      terrain: "Commute / Travel / Training",
+    },
+  },
+  {
+    id: "summit",
+    name: "Summit Base Layer",
+    subtitle: "Merino Quarter-Zip",
+    cats: ["Performance"],
+    price: 129,
+    compare: 155,
+    blurb: "The layer that goes everywhere weather doesn't behave.",
+    description:
+      "Fine-gauge merino wool with a mesh-knit underarm zone that dumps heat on the climb and holds it on the summit. Odor-resistant enough for a three-day pack trip on a one-shirt budget.",
+    img: SUMMIT_MAIN_IMG,
+    glow: "rgba(120, 150, 210, 0.28)",
+    colorways: [
+      { name: "Ridge Navy", hex: "#1c2b45", accent: "#8ab4ff" },
+      { name: "Basalt", hex: "#3a3f4a", accent: "#0a0a0c" },
+      { name: "Bone", hex: "#e8e2d4", accent: "#8f97a6" },
+    ],
+    sizes: [...APPAREL_SIZES],
+    specs: {
+      weight: "180 g (L)",
+      drop: "Fitted",
+      plate: "17.5-micron merino",
+      upper: "Mesh-knit underarm venting",
+      terrain: "Alpine / Base layer / Travel",
+    },
+  },
+  {
+    id: "recon",
+    name: "Recon Duffel",
+    subtitle: "Weatherproof Carry",
+    tag: "New",
+    tagTone: "bone",
+    cats: ["Everyday"],
+    price: 219,
+    compare: 260,
+    blurb: "One bag, every trip, zero babying required.",
+    description:
+      "A fully taped, weatherproof shell built around a single molded base that stands up on a curb or an overhead bin. Cobalt-stitched, water-shrugging, and built to outlast the airline that loses it.",
+    img: RECON_MAIN_IMG,
+    glow: "rgba(61, 123, 255, 0.22)",
+    colorways: [
+      { name: "Matte Black", hex: "#0a0a0c", accent: "#3d7bff" },
+      { name: "Graphite", hex: "#2b2e33", accent: "#8ab4ff" },
+    ],
+    sizes: ["One Size"],
+    specs: {
+      weight: "980 g",
+      drop: "42L capacity",
+      plate: "Molded weatherproof base",
+      upper: "Fully taped seams",
+      terrain: "Carry-on / Gym / Overnight",
     },
   },
 ];

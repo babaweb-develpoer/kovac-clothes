@@ -8,7 +8,16 @@ import {
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
-import { LIFESTYLE_IMG } from "../utils/assets";
+import {
+  ATLAS_CAMPAIGN_IMG,
+  HARDWARE_DETAIL_IMG,
+  HERO_LOOP_VIDEO,
+  KEYNOTE_VIDEO_1,
+  KEYNOTE_VIDEO_2,
+  KEYNOTE_VIDEO_3,
+  LIFESTYLE_NIGHT_IMG,
+  MACRO_WOOL_IMG,
+} from "../utils/assets";
 import { EASE, SectionHeading } from "./ui";
 
 const DURATION = 6500;
@@ -25,12 +34,9 @@ type Slide = {
   align?: "left" | "right";
 };
 
-const ATLAS_MAIN =
-  "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800";
-const MACRO_WOOL =
-  "https://images.pexels.com/photos/13717230/pexels-photo-13717230.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
-const MACRO_DENIM =
-  "https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
+const ATLAS_MAIN = ATLAS_CAMPAIGN_IMG;
+const MACRO_WOOL = MACRO_WOOL_IMG;
+const MACRO_DENIM = HARDWARE_DETAIL_IMG;
 
 const SLIDES: Slide[] = [
   {
@@ -41,6 +47,7 @@ const SLIDES: Slide[] = [
     body: "Before the city wakes, the Atlas is already on. A 20,000 mm KovaShell™ membrane shrugs off the overnight drizzle — you don't plan around the weather, it plans around you.",
     stat: { label: "Waterproofing", value: "20K mm" },
     img: ATLAS_MAIN,
+    video: KEYNOTE_VIDEO_1,
   },
   {
     frame: "02",
@@ -50,6 +57,7 @@ const SLIDES: Slide[] = [
     body: "Packed platform, three flights of stairs, a sprint for closing doors. 25,000 g/m²/24h breathability dumps heat exactly where it builds — so you arrive composed, not steamed.",
     stat: { label: "Breathability", value: "25K g/m²" },
     img: MACRO_WOOL,
+    video: KEYNOTE_VIDEO_2,
     align: "right",
   },
   {
@@ -60,6 +68,7 @@ const SLIDES: Slide[] = [
     body: "StormLock™ 20 mm seam tape, YKK AquaGuard zips, storm plackets on every closure. Look close — that hardware is the whole argument for buying once.",
     stat: { label: "Seam tape", value: "20 mm" },
     img: MACRO_DENIM,
+    video: KEYNOTE_VIDEO_3,
   },
   {
     frame: "04",
@@ -68,8 +77,8 @@ const SLIDES: Slide[] = [
     title: "Home is a 40-block walk. Good.",
     body: "Wet asphalt, one more bar, the long way home. The Atlas keeps the cold out and the night quiet — the last layer you take off is the first one you reach for.",
     stat: { label: "Layers", value: "3-Layer" },
-    img: LIFESTYLE_IMG,
-    video: "https://videos.pexels.com/video-files/2102479/2102479-hd_1920_1080_30fps.mp4",
+    img: LIFESTYLE_NIGHT_IMG,
+    video: HERO_LOOP_VIDEO,
     align: "right",
   },
 ];

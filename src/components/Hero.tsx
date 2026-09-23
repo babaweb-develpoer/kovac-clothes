@@ -8,7 +8,7 @@ import {
 import { ArrowRight, Feather, Play, Star, Wind, Zap } from "lucide-react";
 import { useRef } from "react";
 import { useCart } from "../context/CartContext";
-import { LIFESTYLE_IMG } from "../utils/assets";
+import { HERO_LOOP_VIDEO, HERO_STAGE_IMG, LIFESTYLE_NIGHT_IMG } from "../utils/assets";
 import { EASE, Eyebrow, Magnetic, RevealText } from "./ui";
 
 const CHIPS = [
@@ -25,7 +25,7 @@ const AVATARS = [
   { initials: "SB", bg: "from-sky-300 to-blue-500" },
 ];
 
-const HERO_VIDEO = "https://videos.pexels.com/video-files/2102479/2102479-hd_1920_1080_30fps.mp4";
+const HERO_VIDEO = HERO_LOOP_VIDEO;
 
 export default function Hero({ ready }: { ready: boolean }) {
   const { openProductStory } = useCart();
@@ -70,7 +70,7 @@ export default function Hero({ ready }: { ready: boolean }) {
         <video
           className="h-full w-full object-cover opacity-[0.28] saturate-[0.6]"
           src={HERO_VIDEO}
-          poster={LIFESTYLE_IMG}
+          poster={LIFESTYLE_NIGHT_IMG}
           autoPlay
           muted
           loop
@@ -196,7 +196,7 @@ export default function Hero({ ready }: { ready: boolean }) {
 
             <motion.div style={{ x: sx, y: sy }} className="absolute inset-0">
               <motion.img
-                src="https://images.pexels.com/photos/20363490/pexels-photo-20363490.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
+                src={HERO_STAGE_IMG}
                 alt=""
                 animate={{ y: [0, -16, 0], rotate: [0, -1.2, 0] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}

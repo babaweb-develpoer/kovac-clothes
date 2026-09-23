@@ -1,4 +1,15 @@
-import { LIFESTYLE_IMG } from "../utils/assets";
+import {
+  ATLAS_CAMPAIGN_IMG,
+  HARDWARE_DETAIL_IMG,
+  LIFESTYLE_IMG,
+  LIFESTYLE_NIGHT_IMG,
+  MACRO_CANVAS_IMG,
+  MACRO_WOOL_IMG,
+  RECON_MAIN_IMG,
+  STITCH_DETAIL_IMG,
+  SUMMIT_MAIN_IMG,
+  VOYAGER_MAIN_IMG,
+} from "../utils/assets";
 
 export type StoryChapter = {
   step: string;
@@ -16,10 +27,8 @@ export type StoryChapter = {
 
 export type PerformanceMetric = { label: string; value: number; note: string };
 
-const MACRO_WOOL =
-  "https://images.pexels.com/photos/13717230/pexels-photo-13717230.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
-const MACRO_DENIM =
-  "https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
+const MACRO_WOOL = MACRO_WOOL_IMG;
+const MACRO_DENIM = MACRO_CANVAS_IMG;
 const LIFE = LIFESTYLE_IMG;
 
 export const PERFORMANCE: Record<string, PerformanceMetric[]> = {
@@ -51,6 +60,26 @@ export const PERFORMANCE: Record<string, PerformanceMetric[]> = {
     { label: "Breathability", value: 78, note: "Natural cotton" },
     { label: "Packability", value: 70, note: "Travel-friendly" },
   ],
+  voyager: [
+    { label: "Mobility", value: 93, note: "4-way stretch ripstop" },
+    { label: "Durability", value: 84, note: "Articulated knee" },
+    { label: "Breathability", value: 80, note: "Mesh-lined pockets" },
+    { label: "Visibility", value: 88, note: "Reflective ankle zip" },
+    { label: "Packability", value: 90, note: "Rolls to a fist" },
+  ],
+  summit: [
+    { label: "Warmth", value: 82, note: "17.5-micron merino" },
+    { label: "Breathability", value: 91, note: "Mesh-knit underarm zone" },
+    { label: "Odor resistance", value: 95, note: "Natural wool fiber" },
+    { label: "Softness", value: 89, note: "Fine-gauge knit" },
+    { label: "Packability", value: 93, note: "Compresses to a fist" },
+  ],
+  recon: [
+    { label: "Waterproofing", value: 90, note: "Fully taped shell" },
+    { label: "Durability", value: 92, note: "Molded base, reinforced corners" },
+    { label: "Capacity", value: 85, note: "42L, carry-on legal" },
+    { label: "Organization", value: 88, note: "3 compartments, shoe pocket" },
+  ],
 };
 
 export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
@@ -62,7 +91,7 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "A relaxed, action-back cut gives you full reach across a subway car or a bike saddle — without the trash-bag fit. Shoulders tailored, body articulated, hem set to sit under a pack.",
       specLabel: "Weight, L",
       specValue: "860 g",
-      img: "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      img: ATLAS_CAMPAIGN_IMG,
       imgAlt: "Atlas Storm Shell worn in heavy rain on a city street",
     },
     {
@@ -82,10 +111,8 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "Every critical seam is bonded, then taped with a 20 mm StormLock™ film. YKK AquaGuard zips with a storm placket behind them. Where most shells leak at mile one, this one is still dry at year two.",
       specLabel: "Seam tape",
       specValue: "StormLock™ 20 mm",
-      img: "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-      imgAlt: "Detail of Atlas storm flap and zipper in the rain",
-      scale: 1.4,
-      focusY: "top",
+      img: STITCH_DETAIL_IMG,
+      imgAlt: "Macro detail of Atlas taped storm seam with water beading",
     },
     {
       step: "04",
@@ -104,7 +131,7 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "Tested under 8 hours of British-style drizzle and a New York downpour, the Atlas keeps its word. Water beads, rolls, and leaves. You arrive looking like you planned the weather.",
       specLabel: "Storm rating",
       specValue: "Fully sealed",
-      img: "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      img: LIFESTYLE_NIGHT_IMG,
       imgAlt: "Atlas shell shedding rain at night",
       focusY: "bottom",
     },
@@ -161,8 +188,8 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "YKK zippers in matte black, aglets you won't lose, and a hidden phone pocket in the kangaroo pouch. The only branding is a tonal index stitch at the hem. If you know, you know.",
       specLabel: "Hardware",
       specValue: "Matte YKK",
-      img: MACRO_DENIM,
-      imgAlt: "Macro of fleece fabric with matte hardware detail",
+      img: HARDWARE_DETAIL_IMG,
+      imgAlt: "Macro of matte black YKK zipper hardware",
     },
     {
       step: "05",
@@ -273,7 +300,7 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "Heavyweight cotton canvas, woven tight and garment-washed until it drapes like it's five years old. It creases like a shirt should and shrugs off the creases that shouldn't stay.",
       specLabel: "Fabric",
       specValue: "12 oz canvas",
-      img: MACRO_DENIM,
+      img: MACRO_WOOL,
       imgAlt: "Macro of bone cotton canvas weave",
     },
     {
@@ -293,9 +320,8 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       body: "Corozo buttons — cut from tagua nut, not plastic — age like horn and feel twice the price. Reinforced button plackets mean the Mercer stays buttoned where it counts.",
       specLabel: "Buttons",
       specValue: "Corozo nut",
-      img: "https://images.pexels.com/photos/16964407/pexels-photo-16964407.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-      imgAlt: "Detail of Mercer placket and buttons",
-      scale: 1.5,
+      img: MACRO_DENIM,
+      imgAlt: "Macro detail of a corozo button on canvas",
       focusY: "top",
     },
     {
@@ -318,6 +344,138 @@ export const STORY_CHAPTERS: Record<string, StoryChapter[]> = {
       specValue: "24 / 7 duty",
       img: LIFE,
       imgAlt: "Man in tailored layers walking the night city",
+      full: true,
+    },
+  ],
+
+  voyager: [
+    {
+      step: "01",
+      eyebrow: "The Cut",
+      title: "Built to sprint for the train.",
+      body: "A tapered jogger with an articulated knee pattern that moves the second you do — no restriction climbing stairs two at a time or folding into an economy seat.",
+      specLabel: "Weight, L",
+      specValue: "340 g",
+      img: VOYAGER_MAIN_IMG,
+      imgAlt: "Voyager Tech Pant worn running through a rain-lit city street at night",
+    },
+    {
+      step: "02",
+      eyebrow: "The Fabric",
+      title: "Stretch that remembers its shape.",
+      body: "A 4-way stretch ripstop holds its structure through a full day of movement, then bounces back — no knee-bagging, no seat-sagging by hour six.",
+      specLabel: "Fabric",
+      specValue: "4-way ripstop",
+      img: MACRO_WOOL,
+      imgAlt: "Macro of technical stretch ripstop fabric",
+    },
+    {
+      step: "03",
+      eyebrow: "The Detail",
+      title: "Seen when it matters.",
+      body: "A reflective ankle zip catches headlights and streetlight alike — visibility built in, not bolted on as an afterthought strip.",
+      specLabel: "Ankle zip",
+      specValue: "Reflective",
+      img: STITCH_DETAIL_IMG,
+      imgAlt: "Macro detail of reflective taped ankle zip seam",
+    },
+    {
+      step: "04",
+      eyebrow: "Everywhere",
+      title: "Commute pace. Meeting ready.",
+      body: "Tailored enough to read as trousers from across the room, technical enough to run for the last train without a second thought.",
+      specLabel: "Rotation",
+      specValue: "24 / 7 duty",
+      img: LIFE,
+      imgAlt: "Man walking the night city street in technical layers",
+      full: true,
+    },
+  ],
+
+  summit: [
+    {
+      step: "01",
+      eyebrow: "The Layer",
+      title: "The shirt that goes to altitude.",
+      body: "Fine-gauge merino that regulates temperature whether you're standing still at the summit or climbing hard on the approach — one layer, every condition.",
+      specLabel: "Weight, L",
+      specValue: "180 g",
+      img: SUMMIT_MAIN_IMG,
+      imgAlt: "Man wearing the Summit Base Layer on a mountain ridge at dawn",
+    },
+    {
+      step: "02",
+      eyebrow: "The Fiber",
+      title: "17.5 microns of quiet performance.",
+      body: "Merino this fine wears next to skin without the itch, regulates temperature naturally, and resists odor across days of wear most synthetics can't survive.",
+      specLabel: "Fiber",
+      specValue: "17.5-micron merino",
+      img: MACRO_WOOL,
+      imgAlt: "Macro of fine-gauge merino wool knit",
+    },
+    {
+      step: "03",
+      eyebrow: "The Venting",
+      title: "Built-in air conditioning.",
+      body: "A mesh-knit underarm zone dumps heat exactly where the body generates it most, so the climb up doesn't mean soaked through by the ridge line.",
+      specLabel: "Venting",
+      specValue: "Mesh-knit zones",
+      img: HARDWARE_DETAIL_IMG,
+      imgAlt: "Macro detail of quarter-zip hardware on the Summit base layer",
+    },
+    {
+      step: "04",
+      eyebrow: "Everywhere",
+      title: "Base camp to boarding gate.",
+      body: "The layer that starts the trip on the plane and finishes it on the summit — packable enough to disappear into a carry-on until it's needed.",
+      specLabel: "Rotation",
+      specValue: "3-season layer",
+      img: LIFE,
+      imgAlt: "Man walking through the city at night in technical layers",
+      full: true,
+    },
+  ],
+
+  recon: [
+    {
+      step: "01",
+      eyebrow: "The Build",
+      title: "One bag. No excuses.",
+      body: "A molded base stands the Recon upright on a curb or an overhead bin — no slumping, no digging through a shapeless sack to find your charger.",
+      specLabel: "Capacity",
+      specValue: "42L",
+      img: RECON_MAIN_IMG,
+      imgAlt: "Recon Duffel lit in a dark studio, water beading on the shell",
+    },
+    {
+      step: "02",
+      eyebrow: "The Shell",
+      title: "Weatherproof, not weather-resistant.",
+      body: "A fully taped exterior shrugs off a rain-soaked platform or a puddle on the tarmac — the bag arrives as dry as you do.",
+      specLabel: "Shell",
+      specValue: "Fully taped",
+      img: STITCH_DETAIL_IMG,
+      imgAlt: "Macro detail of taped seam construction on the Recon Duffel",
+    },
+    {
+      step: "03",
+      eyebrow: "The Hardware",
+      title: "Zippers that don't quit at gate 47.",
+      body: "Matte-black hardware rated for daily abuse, with a cobalt-stitched pull tab that's as much a signature as it is a grip.",
+      specLabel: "Hardware",
+      specValue: "Reinforced pulls",
+      img: HARDWARE_DETAIL_IMG,
+      imgAlt: "Macro detail of matte black zipper hardware on the Recon Duffel",
+    },
+    {
+      step: "04",
+      eyebrow: "Everywhere",
+      title: "Gym bag on Monday. Carry-on on Friday.",
+      body: "One bag that covers the whole week without a wardrobe change of its own — the piece that never gets left behind.",
+      specLabel: "Rotation",
+      specValue: "24 / 7 duty",
+      img: LIFE,
+      imgAlt: "Man walking through the city at night carrying technical gear",
       full: true,
     },
   ],

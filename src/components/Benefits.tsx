@@ -2,7 +2,12 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { useCart } from "../context/CartContext";
-import { LIFESTYLE_IMG } from "../utils/assets";
+import {
+  ATLAS_CAMPAIGN_IMG,
+  LIFESTYLE_NIGHT_IMG,
+  MACRO_CANVAS_IMG,
+  MACRO_WOOL_IMG,
+} from "../utils/assets";
 import { Eyebrow, FadeIn, RevealText } from "./ui";
 
 type Benefit = {
@@ -15,12 +20,9 @@ type Benefit = {
   img: string;
 };
 
-const MACRO_WOOL =
-  "https://images.pexels.com/photos/13717230/pexels-photo-13717230.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
-const MACRO_DENIM =
-  "https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
-const RAIN =
-  "https://images.pexels.com/photos/13980607/pexels-photo-13980607.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800";
+const MACRO_WOOL = MACRO_WOOL_IMG;
+const MACRO_DENIM = MACRO_CANVAS_IMG;
+const RAIN = ATLAS_CAMPAIGN_IMG;
 
 const BENEFITS: Benefit[] = [
   {
@@ -39,7 +41,7 @@ const BENEFITS: Benefit[] = [
     body: "Quiet design that survives a client meeting and still looks right on the ridge at 6 a.m. Three or four pieces now replace a wardrobe of maybes.",
     stat: "3",
     statLabel: "Seasons covered",
-    img: LIFESTYLE_IMG,
+    img: LIFESTYLE_NIGHT_IMG,
   },
   {
     n: "03",

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Feather, ShieldCheck, Wind, Zap } from "lucide-react";
+import { MACRO_WOOL_IMG } from "../utils/assets";
 import { SectionHeading, Stagger, Item } from "./ui";
 import type { LucideIcon } from "lucide-react";
 
@@ -36,8 +37,7 @@ const FEATURES: Feature[] = [
   },
 ];
 
-const MACRO =
-  "https://images.pexels.com/photos/13717230/pexels-photo-13717230.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
+const MACRO = MACRO_WOOL_IMG;
 
 export default function Features() {
   return (
