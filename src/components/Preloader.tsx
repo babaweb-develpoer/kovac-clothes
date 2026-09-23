@@ -12,6 +12,14 @@ export default function Preloader({ onDone }: { onDone: () => void }) {
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    let revealed = false;
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
+      setExit(true);
+      document.body.style.overflow = prev;
+      onDone();
+    };
 
     const controls = animate(0, 100, {
       duration: 1.9,
@@ -23,15 +31,18 @@ export default function Preloader({ onDone }: { onDone: () => void }) {
       },
       onComplete: () => {
         setExit(true);
-        window.setTimeout(() => {
-          document.body.style.overflow = prev;
-          onDone();
-        }, 700);
+        window.setTimeout(reveal, 700);
       },
     });
 
+    // Safety net: if the exit animation ever fails to settle (e.g. a
+    // third-party animation-library edge case), don't leave the page
+    // stuck behind the loading overlay.
+    const failSafe = window.setTimeout(reveal, 4000);
+
     return () => {
       controls.stop();
+      window.clearTimeout(failSafe);
       document.body.style.overflow = prev;
     };
   }, [onDone]);

@@ -6,6 +6,7 @@ import CartDrawer, { ToastContainer } from "./components/CartDrawer";
 import CartPage from "./components/CartPage";
 import Collection from "./components/Collection";
 import Cta from "./components/Cta";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Faq from "./components/Faq";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
@@ -46,7 +47,9 @@ function MainExperience() {
 
   return (
     <>
-      <Preloader onDone={onPreloaderDone} />
+      <ErrorBoundary onError={onPreloaderDone}>
+        <Preloader onDone={onPreloaderDone} />
+      </ErrorBoundary>
 
       <a
         href="#main"
