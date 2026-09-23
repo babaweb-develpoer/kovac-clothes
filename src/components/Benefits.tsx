@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { useCart } from "../context/CartContext";
+import { LIFESTYLE_IMG } from "../utils/assets";
 import { Eyebrow, FadeIn, RevealText } from "./ui";
 
 type Benefit = {
@@ -38,7 +39,7 @@ const BENEFITS: Benefit[] = [
     body: "Quiet design that survives a client meeting and still looks right on the ridge at 6 a.m. Three or four pieces now replace a wardrobe of maybes.",
     stat: "3",
     statLabel: "Seasons covered",
-    img: "/images/lifestyle.jpg",
+    img: LIFESTYLE_IMG,
   },
   {
     n: "03",

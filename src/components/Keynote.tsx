@@ -8,6 +8,7 @@ import {
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
+import { LIFESTYLE_IMG } from "../utils/assets";
 import { EASE, SectionHeading } from "./ui";
 
 const DURATION = 6500;
@@ -67,7 +68,7 @@ const SLIDES: Slide[] = [
     title: "Home is a 40-block walk. Good.",
     body: "Wet asphalt, one more bar, the long way home. The Atlas keeps the cold out and the night quiet — the last layer you take off is the first one you reach for.",
     stat: { label: "Layers", value: "3-Layer" },
-    img: "/images/lifestyle.jpg",
+    img: LIFESTYLE_IMG,
     video: "https://videos.pexels.com/video-files/2102479/2102479-hd_1920_1080_30fps.mp4",
     align: "right",
   },

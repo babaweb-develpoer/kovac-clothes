@@ -8,6 +8,7 @@ import {
 import { ArrowRight, Feather, Play, Star, Wind, Zap } from "lucide-react";
 import { useRef } from "react";
 import { useCart } from "../context/CartContext";
+import { LIFESTYLE_IMG } from "../utils/assets";
 import { EASE, Eyebrow, Magnetic, RevealText } from "./ui";
 
 const CHIPS = [
@@ -69,7 +70,7 @@ export default function Hero({ ready }: { ready: boolean }) {
         <video
           className="h-full w-full object-cover opacity-[0.28] saturate-[0.6]"
           src={HERO_VIDEO}
-          poster="/images/lifestyle.jpg"
+          poster={LIFESTYLE_IMG}
           autoPlay
           muted
           loop

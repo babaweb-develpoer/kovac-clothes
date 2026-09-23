@@ -1,3 +1,5 @@
+import { LIFESTYLE_IMG } from "../utils/assets";
+
 export type StoryChapter = {
   step: string;
   eyebrow: string;
@@ -18,7 +20,7 @@ const MACRO_WOOL =
   "https://images.pexels.com/photos/13717230/pexels-photo-13717230.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
 const MACRO_DENIM =
   "https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
-const LIFE = "/images/lifestyle.jpg";
+const LIFE = LIFESTYLE_IMG;
 
 export const PERFORMANCE: Record<string, PerformanceMetric[]> = {
   atlas: [
